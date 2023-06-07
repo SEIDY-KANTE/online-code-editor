@@ -17,3 +17,8 @@
 > Syntax highlighting makes it easier to read and understand your code.
 #### Autocompletion: 
 > Save time with autocompletion for tags, CSS properties, and JavaScript functions.
+
+
+
+https://github.com/SEIDY-KANTE/online-code-editor/assets/82980518/2d39a2af-895a-4f77-867d-6858271e0c4b
+
