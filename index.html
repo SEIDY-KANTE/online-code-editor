@@ -4,21 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/9d84066a7d.js"
-    crossorigin="anonymous"
-  ></script>
+    <script src="https://kit.fontawesome.com/9d84066a7d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
-    
-    <title>My Online Editor </title>
+    <title>Online Code Editor</title>
   </head>
   <body>
-  
-    <h3 class="header"> My Online Editor <i class="fa-solid fa-code"></i></h3>
-   
-    <div class="container">
+    <!-- Header -->
+    <h3 class="header">Online Code Editor <i class="fa-solid fa-code"></i></h3>
 
+    <!-- Controls -->
+    <div style="text-align: center; margin: 10px;">
+      <button id="downloadBtn">Download Project as ZIP</button>
+      <select id="themeSelector">
+        <option value="twilight">Twilight</option>
+        <option value="monokai">Monokai</option>
+        <option value="cobalt">Cobalt</option>
+        <option value="github">GitHub</option>
+        <option value="solarized_light">Solarized Light</option>
+        <option value="solarized_dark">Solarized Dark</option>
+      </select>
+      <button id="toggleMode">
+        <i id="modeIcon" class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- GitHub Link -->
+    <div style="text-align: right; position: absolute; right: 50px; top: 50px;">
+      <i class="fa-brands fa-github"></i>
+      <a href="https://github.com/SEIDY-KANTE/online-code-editor" target="_blank" rel="noopener noreferrer" style="font-size: 20px; text-decoration: none; color: inherit;">Code</a>
+    </div>
+
+    <!-- Editor Container -->
+    <div class="container">
       <div class="left">
-        <label><i class="fa-brands fa-html5"></i></i>HTML</label>
+        <!-- Beautify Button -->
+        <div id="beautifyBtn" style="text-align: left; position: absolute; left: 750px; top: 30px; border-radius: 30px; background-color: gray; cursor: pointer; padding: 4px; font-size: 20px;">
+          <i class="fa-solid fa-table-columns"></i> Beautify Code
+        </div>
+
+        <label><i class="fa-brands fa-html5"></i>HTML</label>
         <div id="html-editor"></div>
 
         <label><i class="fa-brands fa-css3-alt"></i>CSS</label>
@@ -28,18 +52,27 @@
         <div id="js-editor"></div>
       </div>
 
+      <div class="resizer" id="dragMe"></div>
+
       <div class="right">
         <label><i class="fa-solid fa-play"></i>Output</label>
         <iframe id="output"></iframe>
       </div>
-
     </div>
 
+    <!-- Footer -->
+    <footer>
+      <address>Seidy KANTE <i class="fa-solid fa-copyright"></i> Copyright <span id="year"></span></address>
+    </footer>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.22.0/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.7/js/lib/beautify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.7/js/lib/beautify-css.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.7/js/lib/beautify-html.js"></script>
+
+    <script src="script.js"></script>
   </body>
-
-  <footer> <address> Seidy KANTE <i class="fa-solid fa-copyright"></i> Copyright 2023</address> </footer>
-
- <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.22.0/ace.js"></script>
- 
-  <script src="script.js"></script>
 </html>
