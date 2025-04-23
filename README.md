@@ -35,10 +35,12 @@ Check it out in action:
 
 Check out the first version demo video showcasing the initial features and functionality:
 
-https://github.com/SEIDY-KANTE/online-code-editor/demo/demo.mp4
-
-
+https://github.com/user-attachments/assets/9495a4c0-9dc7-4530-8a5f-d15e3473ece4
+ 
 ---
+
+
+
 
 ## 🛠 Installation
 
